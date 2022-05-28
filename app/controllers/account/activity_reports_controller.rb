@@ -66,6 +66,7 @@ class Account::ActivityReportsController < Account::ApplicationController
     strong_params = params.require(:activity_report).permit(
       :title,
       :description,
+      :place_of_training,
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
     )

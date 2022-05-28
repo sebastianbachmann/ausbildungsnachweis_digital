@@ -31,6 +31,15 @@ en:
         _: &description Description
         label: *description
         heading: *description
+      place_of_training:
+        _: &place_of_training Ausbildungsort
+        label: *place_of_training
+        heading: *place_of_training
+        placeholder: None
+        options:
+          one: Ausbildungsbetrieb
+          two: Berufsschule
+          three: Wekstatt
       # 🚅 super scaffolding will insert new fields above this line.
       created_at:
         _: &created_at Added
@@ -89,6 +98,7 @@ en:
       activity_report:
         title: *title
         description: *description
+        place_of_training: *place_of_training
         # 🚅 super scaffolding will insert new activerecord attributes above this line.
         created_at: *created_at
         updated_at: *updated_at

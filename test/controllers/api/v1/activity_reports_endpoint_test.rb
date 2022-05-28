@@ -19,6 +19,7 @@ class Api::V1::ActivityReportsEndpointTest < Api::Test
       activity_report = ActivityReport.find(activity_report_data["id"])
 
       assert_equal activity_report_data['title'], activity_report.title
+      assert_equal activity_report_data['place_of_training'], activity_report.place_of_training
       # 🚅 super scaffolding will insert new fields above this line.
 
       assert_equal activity_report_data["team_id"], activity_report.team_id
