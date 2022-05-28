@@ -1,8 +1,8 @@
 en:
   application:
-    name: Untitled Application
-    owner: Unidentified Developer
+    name: Ausbildungsnachweis Digital
+    owner: Sebastian Bachmann
     description: "You can update this description in `config/locales/en/application.en.yml`."
-    keywords: untitled application seo keywords
-    support_email: change.me@localhost
-    key: untitled_application
+    keywords: ausbildungsnachweis digital seo keywords
+    support_email: sebastian@ausbildungsnachweis.digital
+    key: ausbildungsnachweis_digital
