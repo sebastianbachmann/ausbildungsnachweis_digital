@@ -1,0 +1,8 @@
+<% activity_report ||= @activity_report %>
+<% team ||= @team || activity_report&.team %>
+<%= render 'account/teams/breadcrumbs', team: team %>
+<%= render 'account/shared/breadcrumb', label: t('.label'), url: [:account, team, :activity_reports] %>
+<% if activity_report&.persisted? %>
+  <%= render 'account/shared/breadcrumb', label: activity_report.label_string, url: [:account, activity_report] %>
+<% end %>
+<%= render 'account/shared/breadcrumbs/actions', only_for: 'activity_reports' %>

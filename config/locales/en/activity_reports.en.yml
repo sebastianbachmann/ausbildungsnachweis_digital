@@ -1,0 +1,94 @@
+en:
+  activity_reports: &activity_reports
+    label: &label Activity Reports
+    breadcrumbs:
+      label: *label
+    navigation:
+      label: *label
+      icon: ti-pencil-alt
+    buttons: &buttons
+      new: Add New Activity Report
+      create: Create Activity Report
+      edit: Edit Activity Report
+      update: Update Activity Report
+      destroy: Remove Activity Report
+      shorthand:
+        edit: Edit
+        destroy: Delete
+      confirmations:
+        # TODO customize for your use-case.
+        destroy: Are you sure you want to remove %{activity_report_name}? This will also remove it's associated data. This can't be undone.
+    fields: &fields
+      id:
+        heading: Activity Report ID
+      team_id:
+        heading: Team ID
+      title:
+        _: &title Title
+        label: *title
+        heading: *title
+      description:
+        _: &description Description
+        label: *description
+        heading: *description
+      # 🚅 super scaffolding will insert new fields above this line.
+      created_at:
+        _: &created_at Added
+        label: *created_at
+        heading: *created_at
+      updated_at:
+        _: &updated_at Updated
+        label: *updated_at
+        heading: *updated_at
+    api:
+      collection_actions: "Collection Actions for Activity Reports"
+      index: "List Activity Reports"
+      create: "Add a New Activity Report"
+      member_actions: "Actions for an Individual Activity Report"
+      show: "Retrieve a Activity Report"
+      update: "Update a Activity Report"
+      destroy: "Delete a Activity Report"
+      fields: *fields
+    index:
+      section: "%{teams_possessive} Activity Reports"
+      contexts:
+        team:
+          header: Activity Reports
+          description: Below is a list of Activity Reports that have been added for %{team_name}.
+          description_empty: No Activity Reports have been added for %{team_name}.
+      fields: *fields
+      buttons: *buttons
+    show:
+      section: "%{activity_report_name}"
+      header: Activity Report Details
+      description: Below are the details we have for %{activity_report_name}.
+      manage_description: You'll also find options for updating these details or removing %{activity_report_name} from %{team_name} entirely.
+      fields: *fields
+      buttons: *buttons
+    form: &form
+      buttons: *buttons
+      fields: *fields
+    new:
+      section: "New Activity Report for %{team_name}"
+      header: New Activity Report Details
+      description: Please provide the details of the new Activity Report you'd like to add to %{team_name}.
+      form: *form
+    edit:
+      section: "%{activity_report_name}"
+      header: Edit Activity Report Details
+      description: You can update the details or settings for %{activity_report_name} below.
+      form: *form
+    notifications:
+      created: Activity Report was successfully created.
+      updated: Activity Report was successfully updated.
+      destroyed: Activity Report was successfully destroyed.
+  account:
+    activity_reports: *activity_reports
+  activerecord:
+    attributes:
+      activity_report:
+        title: *title
+        description: *description
+        # 🚅 super scaffolding will insert new activerecord attributes above this line.
+        created_at: *created_at
+        updated_at: *updated_at
