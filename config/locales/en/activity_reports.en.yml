@@ -28,7 +28,7 @@ en:
         label: *title
         heading: *title
       description:
-        _: &description Description
+        _: &description Tätigkeitsbeschreibung
         label: *description
         heading: *description
       place_of_training:
@@ -37,16 +37,20 @@ en:
         heading: *place_of_training
         placeholder: None
         options:
-          one: Ausbildungsbetrieb
-          two: Berufsschule
-          three: Wekstatt
+          ausbildungsbetrieb: Ausbildungsbetrieb
+          berufsschule: Berufsschule
+          werkstatt: Werkstatt
+      duration_of_work:
+        _: &duration_of_work Dauer der Arbeit
+        label: *duration_of_work
+        heading: *duration_of_work
       # 🚅 super scaffolding will insert new fields above this line.
       created_at:
-        _: &created_at Added
+        _: &created_at Hinzugefügt
         label: *created_at
         heading: *created_at
       updated_at:
-        _: &updated_at Updated
+        _: &updated_at Aktualisiert
         label: *updated_at
         heading: *updated_at
     api:
@@ -99,6 +103,7 @@ en:
         title: *title
         description: *description
         place_of_training: *place_of_training
+        duration_of_work: *duration_of_work
         # 🚅 super scaffolding will insert new activerecord attributes above this line.
         created_at: *created_at
         updated_at: *updated_at
