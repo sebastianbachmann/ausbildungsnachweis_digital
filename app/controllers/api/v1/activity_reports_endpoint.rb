@@ -12,6 +12,7 @@ class Api::V1::ActivityReportsEndpoint < Api::V1::Root
       optional :title, type: String, desc: Api.heading(:title)
       optional :description, type: String, desc: Api.heading(:description)
       optional :place_of_training, type: String, desc: Api.heading(:place_of_training)
+      optional :duration_of_work, type: String, desc: Api.heading(:duration_of_work)
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
 

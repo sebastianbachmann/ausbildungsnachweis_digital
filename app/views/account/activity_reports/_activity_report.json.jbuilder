@@ -3,6 +3,7 @@ json.extract! activity_report,
   :team_id,
   :title,
   :place_of_training,
+  :duration_of_work,
   # 🚅 super scaffolding will insert new fields above this line.
   :created_at,
   :updated_at

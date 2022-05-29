@@ -20,6 +20,7 @@
           <tr>
             <th><%= t('.fields.title.heading') %></th>
             <th><%= t('.fields.place_of_training.heading') %></th>
+            <th><%= t('.fields.duration_of_work.heading') %></th>
             <%# 🚅 super scaffolding will insert new field headers above this line. %>
             <th><%= t('.fields.created_at.heading') %></th>
             <th class="text-right"></th>
@@ -31,6 +32,7 @@
               <tr data-id="<%= activity_report.id %>">
                 <td><%= render 'shared/attributes/text', attribute: :title, url: [:account, activity_report] %></td>
                 <td><%= render 'shared/attributes/option', attribute: :place_of_training %></td>
+                <td><%= render 'shared/attributes/text', attribute: :duration_of_work %></td>
                 <%# 🚅 super scaffolding will insert new fields above this line. %>
                 <td><%= render 'shared/attributes/date_and_time', attribute: :created_at %></td>
                 <td class="buttons">

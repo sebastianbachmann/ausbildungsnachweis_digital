@@ -67,6 +67,7 @@ class Account::ActivityReportsController < Account::ApplicationController
       :title,
       :description,
       :place_of_training,
+      :duration_of_work,
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
     )

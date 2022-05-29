@@ -20,6 +20,7 @@ class Api::V1::ActivityReportsEndpointTest < Api::Test
 
       assert_equal activity_report_data['title'], activity_report.title
       assert_equal activity_report_data['place_of_training'], activity_report.place_of_training
+      assert_equal activity_report_data['duration_of_work'], activity_report.duration_of_work
       # 🚅 super scaffolding will insert new fields above this line.
 
       assert_equal activity_report_data["team_id"], activity_report.team_id
@@ -79,6 +80,7 @@ class Api::V1::ActivityReportsEndpointTest < Api::Test
       put "/api/v1/activity_reports/#{@activity_report.id}", params: {
         access_token: access_token,
         title: 'Alternative String Value',
+        duration_of_work: 'Alternative String Value',
         # 🚅 super scaffolding will also insert new fields above this line.
       }
 
@@ -90,6 +92,7 @@ class Api::V1::ActivityReportsEndpointTest < Api::Test
       # But we have to manually assert the value was properly updated.
       @activity_report.reload
       assert_equal @activity_report.title, 'Alternative String Value'
+      assert_equal @activity_report.duration_of_work, 'Alternative String Value'
       # 🚅 super scaffolding will additionally insert new fields above this line.
 
       # Also ensure we can't do that same action as another user.
