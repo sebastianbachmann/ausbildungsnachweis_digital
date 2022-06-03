@@ -1,0 +1,104 @@
+en:
+  activities: &activities
+    label: &label Activities
+    breadcrumbs:
+      label: *label
+    navigation:
+      label: *label
+      icon: ti-pencil-alt
+    buttons: &buttons
+      new: Add New Activity
+      create: Create Activity
+      edit: Edit Activity
+      update: Update Activity
+      destroy: Remove Activity
+      shorthand:
+        edit: Edit
+        destroy: Delete
+      confirmations:
+        # TODO customize for your use-case.
+        destroy: Are you sure you want to remove %{activity_name}? This will also remove it's associated data. This can't be undone.
+    fields: &fields
+      id:
+        heading: Activity ID
+      team_id:
+        heading: Team ID
+      description:
+        _: &description Description
+        label: *description
+        heading: *description
+      duration_of_work:
+        _: &duration_of_work Dauer der Aktivität
+        label: *duration_of_work
+        heading: *duration_of_work
+      place_of_training:
+        _: &place_of_training Ausbildungsort
+        label: *place_of_training
+        heading: *place_of_training
+        placeholder: None
+        options:
+          ausbildungsbetrieb: Ausbildungsbetrieb
+          berufsschule: Berufsschule
+          ausbildungswerkstatt: Ausbildungswerkstatt
+      # 🚅 super scaffolding will insert new fields above this line.
+      created_at:
+        _: &created_at Added
+        label: *created_at
+        heading: *created_at
+      updated_at:
+        _: &updated_at Updated
+        label: *updated_at
+        heading: *updated_at
+    api:
+      collection_actions: "Collection Actions for Activities"
+      index: "List Activities"
+      create: "Add a New Activity"
+      member_actions: "Actions for an Individual Activity"
+      show: "Retrieve a Activity"
+      update: "Update a Activity"
+      destroy: "Delete a Activity"
+      fields: *fields
+    index:
+      section: "%{teams_possessive} Activities"
+      contexts:
+        team:
+          header: Activities
+          description: Below is a list of Activities that have been added for %{team_name}.
+          description_empty: No Activities have been added for %{team_name}.
+      fields: *fields
+      buttons: *buttons
+    show:
+      section: "%{activity_name}"
+      header: Activity Details
+      description: Below are the details we have for %{activity_name}.
+      manage_description: You'll also find options for updating these details or removing %{activity_name} from %{team_name} entirely.
+      fields: *fields
+      buttons: *buttons
+    form: &form
+      buttons: *buttons
+      fields: *fields
+    new:
+      section: "New Activity for %{team_name}"
+      header: New Activity Details
+      description: Please provide the details of the new Activity you'd like to add to %{team_name}.
+      form: *form
+    edit:
+      section: "%{activity_name}"
+      header: Edit Activity Details
+      description: You can update the details or settings for %{activity_name} below.
+      form: *form
+    notifications:
+      created: Activity was successfully created.
+      updated: Activity was successfully updated.
+      destroyed: Activity was successfully destroyed.
+  account:
+    activities: *activities
+  activerecord:
+    attributes:
+      activity:
+        description: *description
+        duration_of_work: *duration_of_work
+        place_of_training: *place_of_training
+        # 🚅 super scaffolding will insert new activerecord attributes above this line.
+        created_at: *created_at
+        updated_at: *updated_at

@@ -1,5 +1,6 @@
 default:
   models:
+    Activity: read
     ActivityReport: read
     Team: read
     Membership:
@@ -29,6 +30,7 @@ admin:
     - admin
     - editor
   models:
+    Activity: manage
     ActivityReport: manage
     Team: manage
     Membership: manage

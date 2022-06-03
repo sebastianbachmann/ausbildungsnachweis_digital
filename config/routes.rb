@@ -67,6 +67,7 @@ Rails.application.routes.draw do
         end
 
         resources :activity_reports
+        resources :activities
       end
     end
   end

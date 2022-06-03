@@ -1,0 +1,29 @@
+<%= render 'account/shared/page' do |p| %>
+  <% p.content_for :title, t('.section') %>
+  <% p.content_for :body do %>
+    <%= render 'account/shared/box', divider: true do |p| %>
+      <% p.content_for :title, t('.header') %>
+      <% p.content_for :description do %>
+        <%= t('.description') %>
+        <%= t('.manage_description') if can? :manage, @activity %>
+      <% end %>
+
+      <% p.content_for :body do %>
+        <% with_attribute_settings object: @activity, strategy: :label do %>
+          <%= render 'shared/attributes/html', attribute: :description %>
+          <%= render 'shared/attributes/text', attribute: :duration_of_work %>
+          <%= render 'shared/attributes/option', attribute: :place_of_training %>
+          <%# 🚅 super scaffolding will insert new fields above this line. %>
+        <% end %>
+      <% end %>
+
+      <% p.content_for :actions do %>
+        <%= link_to t('.buttons.edit'), [:edit, :account, @activity], class: first_button_primary if can? :edit, @activity %>
+        <%= button_to t('.buttons.destroy'), [:account, @activity], method: :delete, class: first_button_primary, data: { confirm: t('.buttons.confirmations.destroy', model_locales(@activity)) } if can? :destroy, @activity %>
+        <%= link_to t('global.buttons.back'), [:account, @team, :activities], class: first_button_primary %>
+      <% end %>
+    <% end %>
+
+    <%# 🚅 super scaffolding will insert new children above this line. %>
+  <% end %>
+<% end %>
