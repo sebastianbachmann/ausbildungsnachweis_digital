@@ -40,6 +40,7 @@ en:
           ausbildungsbetrieb: Ausbildungsbetrieb
           berufsschule: Berufsschule
           werkstatt: Werkstatt
+          kunde: Beim Kunden Vor-Ort
       duration_of_work:
         _: &duration_of_work Dauer der Arbeit
         label: *duration_of_work
