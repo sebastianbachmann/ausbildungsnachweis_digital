@@ -12,8 +12,9 @@
         <% with_attribute_settings object: @activity_report, strategy: :label do %>
           <%= render 'shared/attributes/text', attribute: :title %>
           <%= render 'shared/attributes/html', attribute: :description %>
-          <%= render 'shared/attributes/option', attribute: :place_of_training %>
-          <%= render 'shared/attributes/text', attribute: :duration_of_work %>
+          <%= render 'shared/attributes/text', attribute: :apprentice_firstname %>
+          <%= render 'shared/attributes/text', attribute: :apprentice_lastname %>
+          <%= render 'shared/attributes/option', attribute: :year_of_training %>
           <%# 🚅 super scaffolding will insert new fields above this line. %>
         <% end %>
       <% end %>

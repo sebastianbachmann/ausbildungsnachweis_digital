@@ -45,6 +45,23 @@ en:
         _: &duration_of_work Dauer der Arbeit
         label: *duration_of_work
         heading: *duration_of_work
+      apprentice_firstname:
+        _: &apprentice_firstname Apprentice Firstname
+        label: *apprentice_firstname
+        heading: *apprentice_firstname
+      apprentice_lastname:
+        _: &apprentice_lastname Apprentice Lastname
+        label: *apprentice_lastname
+        heading: *apprentice_lastname
+      year_of_training:
+        _: &year_of_training Year Of Training
+        label: *year_of_training
+        heading: *year_of_training
+        placeholder: None
+        options:
+          one: One
+          two: Two
+          three: Three
       # 🚅 super scaffolding will insert new fields above this line.
       created_at:
         _: &created_at Hinzugefügt
@@ -105,6 +122,9 @@ en:
         description: *description
         place_of_training: *place_of_training
         duration_of_work: *duration_of_work
+        apprentice_firstname: *apprentice_firstname
+        apprentice_lastname: *apprentice_lastname
+        year_of_training: *year_of_training
         # 🚅 super scaffolding will insert new activerecord attributes above this line.
         created_at: *created_at
         updated_at: *updated_at

@@ -4,8 +4,9 @@
   <% with_field_settings form: form do %>
     <%= render 'shared/fields/text_field', method: :title, options: {autofocus: true} %>
     <%= render 'shared/fields/trix_editor', method: :description %>
-    <%= render 'shared/fields/super_select', method: :place_of_training %>
-    <%= render 'shared/fields/text_field', method: :duration_of_work %>
+    <%= render 'shared/fields/text_field', method: :apprentice_firstname %>
+    <%= render 'shared/fields/text_field', method: :apprentice_lastname %>
+    <%= render 'shared/fields/super_select', method: :year_of_training %>
     <%# 🚅 super scaffolding will insert new fields above this line. %>
   <% end %>
 
