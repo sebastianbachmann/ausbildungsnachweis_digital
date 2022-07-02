@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_22_193031) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_22_195213) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -80,6 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_193031) do
     t.string "apprentice_firstname"
     t.string "apprentice_lastname"
     t.string "year_of_training"
+    t.date "start_of_apprenticeship"
     t.index ["team_id"], name: "index_activity_reports_on_team_id"
   end
 

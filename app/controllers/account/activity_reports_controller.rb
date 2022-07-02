@@ -69,10 +69,12 @@ class Account::ActivityReportsController < Account::ApplicationController
       :apprentice_firstname,
       :apprentice_lastname,
       :year_of_training,
+      :start_of_apprenticeship,
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
     )
 
+    assign_date(strong_params, :start_of_apprenticeship)
     # 🚅 super scaffolding will insert processing for new fields above this line.
 
     strong_params

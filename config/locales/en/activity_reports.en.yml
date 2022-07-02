@@ -62,6 +62,10 @@ en:
           one: One
           two: Two
           three: Three
+      start_of_apprenticeship:
+        _: &start_of_apprenticeship Start Of Apprenticeship
+        label: *start_of_apprenticeship
+        heading: *start_of_apprenticeship
       # 🚅 super scaffolding will insert new fields above this line.
       created_at:
         _: &created_at Hinzugefügt
@@ -125,6 +129,7 @@ en:
         apprentice_firstname: *apprentice_firstname
         apprentice_lastname: *apprentice_lastname
         year_of_training: *year_of_training
+        start_of_apprenticeship: *start_of_apprenticeship
         # 🚅 super scaffolding will insert new activerecord attributes above this line.
         created_at: *created_at
         updated_at: *updated_at
