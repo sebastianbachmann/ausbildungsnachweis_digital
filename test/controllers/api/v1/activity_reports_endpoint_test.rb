@@ -25,6 +25,7 @@ class Api::V1::ActivityReportsEndpointTest < Api::Test
       assert_equal activity_report_data['apprentice_lastname'], activity_report.apprentice_lastname
       assert_equal activity_report_data['year_of_training'], activity_report.year_of_training
       assert_equal Date.parse(activity_report_data['start_of_apprenticeship']), activity_report.start_of_apprenticeship
+      assert_equal Date.parse(activity_report_data['end_of_apprenticeship']), activity_report.end_of_apprenticeship
       # 🚅 super scaffolding will insert new fields above this line.
 
       assert_equal activity_report_data["team_id"], activity_report.team_id

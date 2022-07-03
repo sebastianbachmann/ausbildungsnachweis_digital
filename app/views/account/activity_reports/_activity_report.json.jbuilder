@@ -8,6 +8,7 @@ json.extract! activity_report,
   :apprentice_lastname,
   :year_of_training,
   :start_of_apprenticeship,
+  :end_of_apprenticeship,
   # 🚅 super scaffolding will insert new fields above this line.
   :created_at,
   :updated_at

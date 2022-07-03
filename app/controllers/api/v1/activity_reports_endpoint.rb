@@ -17,6 +17,7 @@ class Api::V1::ActivityReportsEndpoint < Api::V1::Root
       optional :apprentice_lastname, type: String, desc: Api.heading(:apprentice_lastname)
       optional :year_of_training, type: String, desc: Api.heading(:year_of_training)
       optional :start_of_apprenticeship, type: Date, desc: Api.heading(:start_of_apprenticeship)
+      optional :end_of_apprenticeship, type: Date, desc: Api.heading(:end_of_apprenticeship)
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
 
