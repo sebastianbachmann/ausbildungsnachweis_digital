@@ -20,6 +20,7 @@ class Api::V1::ActivitiesEndpointTest < Api::Test
 
       assert_equal activity_data['duration_of_work'], activity.duration_of_work
       assert_equal activity_data['place_of_training'], activity.place_of_training
+      assert_equal activity_data['apprenticeship_training_framework'], activity.apprenticeship_training_framework
       # 🚅 super scaffolding will insert new fields above this line.
 
       assert_equal activity_data["team_id"], activity.team_id

@@ -40,6 +40,16 @@ en:
           ausbildungsbetrieb: Ausbildungsbetrieb
           berufsschule: Berufsschule
           ausbildungswerkstatt: Ausbildungswerkstatt
+          kunde: Bei Kunde Vor-Ort
+      apprenticeship_training_framework:
+        _: &apprenticeship_training_framework Apprenticeship Training Framework
+        label: *apprenticeship_training_framework
+        heading: *apprenticeship_training_framework
+        placeholder: None
+        options:
+          0: Nicht zu­or­den­bar
+          1: Berufsbildungs, Arbeits- und Tarifrecht
+          2: Aufbau und Organisation des Ausbildungsbetriebes
       # 🚅 super scaffolding will insert new fields above this line.
       created_at:
         _: &created_at Added
@@ -99,6 +109,7 @@ en:
         description: *description
         duration_of_work: *duration_of_work
         place_of_training: *place_of_training
+        apprenticeship_training_framework: *apprenticeship_training_framework
         # 🚅 super scaffolding will insert new activerecord attributes above this line.
         created_at: *created_at
         updated_at: *updated_at

@@ -12,6 +12,7 @@ class Api::V1::ActivitiesEndpoint < Api::V1::Root
       optional :description, type: String, desc: Api.heading(:description)
       optional :duration_of_work, type: String, desc: Api.heading(:duration_of_work)
       optional :place_of_training, type: String, desc: Api.heading(:place_of_training)
+      optional :apprenticeship_training_framework, type: String, desc: Api.heading(:apprenticeship_training_framework)
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
 

@@ -67,6 +67,7 @@ class Account::ActivitiesController < Account::ApplicationController
       :description,
       :duration_of_work,
       :place_of_training,
+      :apprenticeship_training_framework,
       # 🚅 super scaffolding will insert new fields above this line.
       # 🚅 super scaffolding will insert new arrays above this line.
     )

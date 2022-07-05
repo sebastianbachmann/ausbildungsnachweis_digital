@@ -18,6 +18,7 @@
       <table class="table">
         <thead>
           <tr>
+            <th><%= t('.fields.apprenticeship_training_framework.heading') %></th>
             <%# 🚅 super scaffolding will insert new field headers above this line. %>
             <th><%= t('.fields.created_at.heading') %></th>
             <th class="text-right"></th>
@@ -27,6 +28,7 @@
           <% activities.each do |activity| %>
             <% with_attribute_settings object: activity do %>
               <tr data-id="<%= activity.id %>">
+                <td><%= render 'shared/attributes/option', attribute: :apprenticeship_training_framework %></td>
                 <%# 🚅 super scaffolding will insert new fields above this line. %>
                 <td><%= render 'shared/attributes/date_and_time', attribute: :created_at %></td>
                 <td class="buttons">
